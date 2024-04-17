@@ -15,11 +15,12 @@
         color: #fff;
     }
     header {
-        background-color: #222;
+        background-color: rgba(34, 34, 34, 0.8);
         color: #fff;
         padding: 20px;
         text-align: center;
         position: relative;
+        z-index: 1; /* Ensure header is above background image */
     }
     .glitch-text {
         position: relative;
@@ -90,6 +91,7 @@
         justify-content: center;
         align-items: center;
         height: 80vh;
+        margin-top: 50px;
     }
     .box {
         width: 200px;
@@ -109,6 +111,34 @@
     .box:hover {
         transform: scale(1.1);
     }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .gallery-item {
+        width: 300px;
+        height: 200px;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+        transform: scale(1.1); /* Scale up on hover */
+    }
+    .gallery-item a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 </style>
 </head>
 <body>
@@ -122,8 +152,30 @@
         </div>
     </div>
     <p>Explore more cool content:</p>
-    <a href="https://open.spotify.com/user/omwgv3cj7rpkjudqigp3g2k4y?si=qCWsTPf-SgqFVZjBJ0gDvg&nd=1&dlsi=62ce7b9dce434ba6" class="button green">Spotify</a> <!-- Twitter blue background -->
-    <a href="https://www.instagram.com/harryshahrukh/" class="button pink">Instagram</a> <!-- Gradient text effect -->
+    <a href="https://open.spotify.com/user/omwgv3cj7rpkjudqigp3g2k4y?si=qCWsTPf-SgqFVZjBJ0gDvg&nd=1&dlsi=62ce7b9dce434ba6" class="button green">Spotify</a> 
+    <a href="https://www.instagram.com/harryshahrukh/" class="button pink">Instagram</a>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="https://animesuge.to/anime/jujutsu-kaisen-32n8/ep-1">
+                <img src="Jujutsu.jpg" alt="Jujutsu Kaisen">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://animesuge.to/anime/demon-slayer-kimetsu-no-yaiba-6q67/ep-1">
+                <img src="ds.webp" alt="Demon Slayer">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://animesuge.to/anime/chainsaw-man-8o9q/ep-1">
+                <img src="anime-chainsaw.jpg" alt="Chainsaw Man">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="https://animesuge.to/anime/solo-leveling-3rpv2/ep-1">
+                <img src="sl.jpg" alt="Solo Leveling">
+            </a>
+        </div>
+    </div>
 </main>
 </body>
 </html>
