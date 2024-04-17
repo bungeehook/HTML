@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harry's World</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style>
     body {
         font-family: 'Poppins', sans-serif;
@@ -28,22 +29,23 @@
         font-size: 36px;
         font-weight: bold;
         animation: glitch 2s infinite alternate;
+        animation-timing-function: steps(10, end);
     }
     @keyframes glitch {
         0% {
             transform: translateX(0);
         }
         20% {
-            transform: translateX(-2px);
+            transform: translateX(-5px);
         }
         40% {
-            transform: translateX(2px);
+            transform: translateX(5px);
         }
         60% {
-            transform: translateX(-3px);
+            transform: translateX(-7px);
         }
         80% {
-            transform: translateX(3px);
+            transform: translateX(7px);
         }
         100% {
             transform: translateX(0);
@@ -79,12 +81,14 @@
     }
     .button.green:hover {
         background-color: #1A9144;
+        transform: scale(1.1);
     }
     .button.pink {
         background-color: #E4405F; /* Instagram pink */
     }
     .button.pink:hover {
         background-color: #D9314C; /* Darker pink on hover */
+        transform: scale(1.1);
     }
     .container {
         display: flex;
@@ -98,7 +102,7 @@
         height: 200px;
         background-color: #ff0000; /* Red color */
         border: 2px solid #333;
-        border-radius: 10px;
+        border-radius: 50%;
         text-align: center;
         cursor: pointer;
         transition: transform 0.3s ease;
@@ -107,6 +111,7 @@
         color: #fff;
         font-weight: 700;
         text-decoration: none; /* Remove underline */
+        font-family: 'Roboto', sans-serif; /* Use YouTube font (Roboto) */
     }
     .box:hover {
         transform: scale(1.1);
